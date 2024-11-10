@@ -1,0 +1,14 @@
+<!-- views/dashboard.ejs -->
+<div class="container">
+    <h1>Welcome, <%= user.name %>!</h1>
+
+    <p class="subscription-status">
+        <% if (user.subscriptionStatus) { %>
+            Subscription Active from <%= user.subscriptionDate.toDateString() %> to <%= user.subscriptionEndDate.toDateString() %>
+        <% } else { %>
+            No active subscription. <a href="/payment/pay-subscription">Get Subscription</a>
+        <% } %>
+    </p>
+
+    <a href="/auth/logout">Logout</a>
+</div>

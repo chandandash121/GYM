@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay for Subscription</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gym Membership</h1>
+        <p class="subscription-title">Choose Your Subscription Plan</p>
+        
+        <!-- views/pay-subscription.ejs -->
+<form method="POST" action="/payment/pay-subscription">
+    <label for="duration">Select Subscription Duration:</label>
+    <select id="duration" name="duration" required>
+        <option value="1">1 Month</option>
+        <option value="3">3 Months</option>
+        <option value="12">1 Year</option>
+    </select>
+    <button type="submit">Pay for Subscription</button>
+</form>
+
+        
+        <a href="/dashboard">Back to Dashboard</a>
+    </div>
+</body>
+</html>
